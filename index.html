@@ -219,26 +219,35 @@
   }
 </style>
 
- <section class="section factory">
+ ChatGPT:
+
+なるほどです。今のコードだとボタン風リンクと画像が別要素になっていて、リンクがどれか分かりにくい状態です。
+改善するには リンク内に画像もテキストも入れる 形に書き換えると直感的に「ボタンを押すとリンクに飛ぶ」と分かります。
+
+書き換え例は以下です：
+
+<section class="section factory"> 
   <p class="factory-link">
     提携工場: 
-    <a href="http://haruzumi.kir.jp/" target="_blank" class="btn-link">ミスタータイヤマン 春住</a>
-    <img src="はるずみタイヤ.webp" alt="ミスタータイヤマン 春住" class="factory-img">
+    <a href="http://haruzumi.kir.jp/" target="_blank" class="btn-factory">
+      <img src="はるずみタイヤ.webp" alt="ミスタータイヤマン 春住" class="factory-img">
+      ミスタータイヤマン 春住
+    </a>
   </p>
 </section>
 
 <style>
 .factory-link {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* リンクと画像の間隔 */
   margin-top: 20px;
 }
 
-.btn-link {
-  display: inline-block;
+/* ボタン風にリンク全体を囲む */
+.btn-factory {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* 画像と文字の間隔 */
   padding: 10px 20px;
-  background-color: #FF6600;
+  background-color: #FF6600; /* ボタン色 */
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
@@ -246,12 +255,12 @@
   transition: background-color 0.3s;
 }
 
-.btn-link:hover {
+.btn-factory:hover {
   background-color: #e65c00;
 }
 
 .factory-img {
-  height: 200px; /* 40px × 3 */
+  height: 200px; /* 3倍サイズ */
   object-fit: contain;
 }
 </style>
