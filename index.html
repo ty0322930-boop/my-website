@@ -112,18 +112,8 @@
         <td>75,000円</td>
         <td>しっかり磨き＋ガラスコーティング</td>
       </tr>
-    </table>
-  </div>
-
-  <div class="price-category">オプション</div>
-  <div class="table-wrapper">
-    <table>
       <tr class="table-header">
-        <th>コース</th>
-        <th>軽自動車</th>
-        <th>コンパクト・セダン</th>
-        <th>ワンボックス・SUV</th>
-        <th>内容</th>
+        <th colspan="5">オプション</th>
       </tr>
       <tr>
         <td>ライトクリーニング</td>
@@ -141,40 +131,21 @@
       </tr>
       <tr>
         <td>任意保険見直し相談</td>
-        <td>0円</td>
-        <td>0円</td>
-        <td>0円</td>
-        <td>無料で保険の見直し相談が可能です</td>
+        <td colspan="3">0円（無料）</td>
+        <td>保険の内容や料金を無料で見直し相談できます</td>
       </tr>
     </table>
   </div>
+
+  <!-- 幅を広げるだけのCSS -->
+  <style>
+    .pricing table th:first-child,
+    .pricing table td:first-child {
+      width: 200px; /* ←ここで横幅を広げる（必要に応じて数値調整） */
+      white-space: nowrap; /* 文字折り返しを防止 */
+    }
+  </style>
 </section>
-
-<style>
-/* ===== コース列を広げるCSS（デザイン変更なし） ===== */
-.pricing table th:first-child,
-.pricing table td:first-child {
-  width: 22%; /* ← ここを調整すれば列の幅を変えられます（例：25%でもOK） */
-  white-space: nowrap;
-}
-
-/* ※この下は元のスタイルがある場合はそのままでOK */
-.table-wrapper {
-  overflow-x: auto;
-}
-.table-header th {
-  text-align: center;
-}
-.pricing table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.pricing th, .pricing td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-}
-</style>
 
 
 <section class="section" id="contact">
