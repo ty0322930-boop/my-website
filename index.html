@@ -114,13 +114,38 @@
 <section class="section pricing">
   <h2>料金プラン</h2>
   <div class="table-wrapper">
+    <style>
+      /* 料金表の列幅を調整 */
+      .pricing table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+      }
+      .pricing th,
+      .pricing td {
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+      /* コース列の幅を広く設定 */
+      .pricing th:first-child,
+      .pricing td:first-child {
+        width: 220px; /* ←ここで幅調整（デフォルトより広め） */
+        white-space: nowrap; /* 折り返し防止 */
+      }
+      /* オプション見出し行 */
+      .pricing .table-header th[colspan="5"] {
+        background-color: #f8f8f8;
+        font-weight: bold;
+      }
+    </style>
+
     <table>
       <tr class="table-header">
         <th>コース</th>
         <th>軽自動車</th>
         <th>コンパクト・セダン</th>
         <th>ワンボックス・SUV</th>
-        <th>内容</th> <!-- 内容列を一番右に配置 -->
+        <th>内容</th>
       </tr>
 
       <!-- メインコース -->
@@ -151,11 +176,11 @@
         <th colspan="5">オプション</th>
       </tr>
       <tr>
-        <td>ヘッドライトクリーニング</td>
+        <td>ライトクリーニング</td>
         <td>5,000円</td>
         <td>5,000円</td>
         <td>5,000円</td>
-        <td>ヘッドライトを透明な状態にしてコーティングします</td>
+        <td>ライトを透明な状態にしてコーティングします</td>
       </tr>
       <tr>
         <td>コーティングメンテナンス</td>
