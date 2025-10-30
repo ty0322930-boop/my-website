@@ -83,32 +83,6 @@
 <section class="section pricing">
   <h2>料金プラン</h2>
   <div class="table-wrapper">
-    <style>
-      /* 料金表全体設定 */
-      .pricing table {
-        width: 100%;
-        border-collapse: collapse;
-        text-align: center;
-      }
-      .pricing th,
-      .pricing td {
-        border: 1px solid #ddd;
-        padding: 10px;
-      }
-      /* 通常のコース行だけコース列を広くする */
-      .pricing tr:not(.table-header) td:first-child {
-        width: 220px; /* ←ここで横幅調整 */
-        white-space: nowrap; /* 折り返し防止 */
-      }
-      /* 「オプション」見出し行デザイン */
-      .pricing .table-header th[colspan="5"] {
-        background-color: #f8f8f8;
-        font-weight: bold;
-        text-align: left;
-        padding: 10px 12px;
-      }
-    </style>
-
     <table>
       <tr class="table-header">
         <th>コース</th>
@@ -117,8 +91,6 @@
         <th>ワンボックス・SUV</th>
         <th>内容</th>
       </tr>
-
-      <!-- メインコース -->
       <tr>
         <td>スッキリ仕上げコース</td>
         <td>20,000円</td>
@@ -140,10 +112,18 @@
         <td>75,000円</td>
         <td>しっかり磨き＋ガラスコーティング</td>
       </tr>
+    </table>
+  </div>
 
-      <!-- オプション -->
+  <div class="price-category">オプション</div>
+  <div class="table-wrapper">
+    <table>
       <tr class="table-header">
-        <th colspan="5">オプション</th>
+        <th>コース</th>
+        <th>軽自動車</th>
+        <th>コンパクト・セダン</th>
+        <th>ワンボックス・SUV</th>
+        <th>内容</th>
       </tr>
       <tr>
         <td>ライトクリーニング</td>
@@ -159,16 +139,43 @@
         <td>15,000円</td>
         <td>1年に1回の定期メンテナンス</td>
       </tr>
-
-      <!-- 無料相談 -->
       <tr>
         <td>任意保険見直し相談</td>
-        <td colspan="3">0円（無料）</td>
-        <td>保険の内容や料金を無料で見直し相談できます</td>
+        <td>0円</td>
+        <td>0円</td>
+        <td>0円</td>
+        <td>無料で保険の見直し相談が可能です</td>
       </tr>
     </table>
   </div>
 </section>
+
+<style>
+/* ===== コース列を広げるCSS（デザイン変更なし） ===== */
+.pricing table th:first-child,
+.pricing table td:first-child {
+  width: 22%; /* ← ここを調整すれば列の幅を変えられます（例：25%でもOK） */
+  white-space: nowrap;
+}
+
+/* ※この下は元のスタイルがある場合はそのままでOK */
+.table-wrapper {
+  overflow-x: auto;
+}
+.table-header th {
+  text-align: center;
+}
+.pricing table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.pricing th, .pricing td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+
 
 <section class="section" id="contact">
 <h2>予約・お問い合わせ</h2>
