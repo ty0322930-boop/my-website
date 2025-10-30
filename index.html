@@ -115,7 +115,7 @@
   <h2>料金プラン</h2>
   <div class="table-wrapper">
     <style>
-      /* 料金表の列幅を調整 */
+      /* 料金表全体設定 */
       .pricing table {
         width: 100%;
         border-collapse: collapse;
@@ -126,16 +126,17 @@
         border: 1px solid #ddd;
         padding: 10px;
       }
-      /* コース列の幅を広く設定 */
-      .pricing th:first-child,
-      .pricing td:first-child {
-        width: 220px; /* ←ここで幅調整（デフォルトより広め） */
+      /* 通常のコース行だけコース列を広くする */
+      .pricing tr:not(.table-header) td:first-child {
+        width: 220px; /* ←ここで横幅調整 */
         white-space: nowrap; /* 折り返し防止 */
       }
-      /* オプション見出し行 */
+      /* 「オプション」見出し行デザイン */
       .pricing .table-header th[colspan="5"] {
         background-color: #f8f8f8;
         font-weight: bold;
+        text-align: left;
+        padding: 10px 12px;
       }
     </style>
 
@@ -174,31 +175,8 @@
       <!-- オプション -->
       <tr class="table-header">
         <th colspan="5">オプション</th>
-      </tr>
-      <tr>
-        <td>ライトクリーニング</td>
-        <td>5,000円</td>
-        <td>5,000円</td>
-        <td>5,000円</td>
-        <td>ライトを透明な状態にしてコーティングします</td>
-      </tr>
-      <tr>
-        <td>コーティングメンテナンス</td>
-        <td>10,000円</td>
-        <td>13,000円</td>
-        <td>15,000円</td>
-        <td>1年に1回の定期メンテナンス</td>
-      </tr>
+      <
 
-      <!-- 無料相談 -->
-      <tr>
-        <td>任意保険見直し相談</td>
-        <td colspan="3">0円（無料）</td>
-        <td>保険の内容や料金を無料で見直し相談できます</td>
-      </tr>
-    </table>
-  </div>
-</section>
 
 <section class="section" id="contact">
 <h2>予約・お問い合わせ</h2>
