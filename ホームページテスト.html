@@ -110,6 +110,13 @@
 html {
   scroll-behavior: smooth;
 }
+.same-size-img {
+  width: 300px !important;
+  height: 300px !important;
+  object-fit: cover !important;
+  display: block;
+}
+
 </style>
 
 
@@ -140,26 +147,139 @@ html {
   </ul>
 </nav>
 
+
 <section class="section">
 <h2>作業ポイント</h2>
 <div class="features">
   <div class="feature">
-    <img src="./professional_skill.webp" alt="プロの技術">
+    <img src="./professional_skill.webp" alt="プロの技術" class="same-size-img">
     <h3>プロの技術</h3>
     <p>小キズや水垢をしっかり除去して車に<br>光沢を出すコーティング施工</p>
   </div>
   <div class="feature">
-    <img src="./on_site_service.webp" alt="出張対応">
+    <img src="./on_site_service.webp" alt="出張対応" class="same-size-img">
     <h3>出張対応</h3>
     <p>自宅や職場で施工OK<br>（水道・電源が必要）福岡市と近郊対応</p>
   </div>
   <div class="feature">
-    <img src="./clear_pricing.webp" alt="明朗価格">
+    <img src="./clear_pricing.webp" alt="明朗価格" class="same-size-img">
     <h3>明朗価格で安心</h3>
     <p>3パターンから選べる料金プラン<br>追加料金も明確で安心</p>
   </div>
 </div>
 </section>
+<!-- STKスペース：コーティングメリットセクション（作業ポイントと左右揃え） -->
+<section id="merit" class="stk-coat-section" aria-labelledby="stk-coat-title">
+  <h2 id="stk-coat-title" class="stk-coat-heading">コーティングで、愛車が“毎日ショールーム”になる</h2>
+
+  <ul class="stk-coat-features">
+    <li>
+      <span class="icon">✨</span>
+      <div>
+        <h3>新車のような深い艶が続く</h3>
+        <p>高光沢のガラス皮膜がボディを包み込み、ショールーム品質の輝きを長期間維持します。</p>
+      </div>
+    </li>
+    <li>
+      <span class="icon">🧼</span>
+      <div>
+        <h3>汚れが付きにくく、洗車がラク</h3>
+        <p>汚れや水アカが固着しにくくなるため、軽い水洗いでスルッと落ちます。洗車時間を大幅に短縮。</p>
+      </div>
+    </li>
+    <li>
+      <span class="icon">🛡️</span>
+      <div>
+        <h3>小キズ・紫外線から塗装を保護</h3>
+        <p>日常の擦りキズや紫外線による色あせを抑え、塗装の美しさを長持ちさせます。</p>
+      </div>
+    </li>
+    <li>
+      <span class="icon">💰</span>
+      <div>
+        <h3>ワックス不要で手間とコストを節約</h3>
+        <p>耐久は製品によって1〜5年。定期的なワックス不要で、ランニングコストが下がります。</p>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📈</span>
+      <div>
+        <h3>下取り査定でもプラスに</h3>
+        <p>塗装の状態が良い車は査定評価が高くなりやすく、長期的な資産価値を守ります。</p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<style>
+  /* ---- コーティングメリット用スタイル（作業ポイントと左右揃え） ---- */
+  .stk-coat-section { 
+    padding: 40px 16px; 
+    background: #fbfbfd; 
+    color: #222; 
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif; 
+  }
+
+  .stk-coat-heading { 
+    font-size: 26px; 
+    margin: 0 0 24px; 
+    color: #0d2b3a; 
+    text-align: left; /* 左揃え */
+    padding-left: 16px; /* 作業ポイントと同じ左空白 */
+  }
+
+  .stk-coat-features { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 18px; 
+  }
+
+  .stk-coat-features li { 
+    display: flex; 
+    gap: 14px; 
+    align-items: flex-start; 
+    background: #ffffff; 
+    border: 1px solid #eee; 
+    padding: 14px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 6px rgba(15,20,25,0.03); 
+  }
+
+  .stk-coat-features .icon { 
+    font-size: 22px; 
+    width: 44px; 
+    height: 44px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 8px; 
+    background: linear-gradient(180deg, #f6fafc 0%, #eaf3f6 100%); 
+    flex-shrink: 0; 
+  }
+
+  .stk-coat-features h3 { 
+    margin: 0 0 6px; 
+    font-size: 16px; 
+    color: #0d2b3a; 
+  }
+
+  .stk-coat-features p { 
+    margin: 0; 
+    font-size: 14px; 
+    color: #444; 
+    line-height: 1.55; 
+  }
+
+  /* Responsive tweaks */
+  @media (max-width:520px){
+    .stk-coat-heading { font-size:20px; }
+    .stk-coat-features li { padding:12px; }
+  }
+</style>
+
 
 <section class="section">
 <div id="service"></div>
