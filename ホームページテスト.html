@@ -40,6 +40,25 @@
     box-shadow: 0 2px 6px rgba(201,161,58,0.15);
     display: inline-block;
   }
+.hero-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffcc00, #ff8800);
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 12px 24px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+  animation: pop 0.8s ease forwards;
+}
+
+/* ちょっとポップなアニメーションで目立つ */
+@keyframes pop {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
 </style>
 
 <!-- Schema.org構造化データ -->
@@ -133,6 +152,8 @@ html {
 </style>
 
 
+
+
 <header>
 <div class="logo">STK Mobile Coating</div>
 <div class="contact">
@@ -144,11 +165,16 @@ html {
 </header>
 
 <section class="hero">
-<h1>STK Mobile Coating</h1>
-<h2>福岡市内・近郊に出張対応。水と電源があれば艶は来る。</h2>
-<p>車の細目〜中目磨きまで選べる明朗プラン。モバイルコーティングで愛車をピカピカに。</p>
-<img src="./car_coating.webp" alt="作業中の車の写真" class="responsive">
+
+  <!-- ★ 出張対応をド派手に表示 -->
+  <div class="hero-badge">🚗✨ 出張専門コーティングサービス ✨🚗</div>
+
+  <h1>STK Mobile Coating</h1>
+  <h2>福岡市内・近郊に出張対応。水と電源があれば艶は来る。</h2>
+  <p>車の細目〜中目磨きまで選べる明朗プラン。モバイルコーティングで愛車をピカピカに。</p>
+  <img src="./car_coating.webp" alt="作業中の車の写真" class="responsive">
 </section>
+
 
 <nav class="stk-tab-menu">
   <ul>
@@ -327,10 +353,13 @@ html {
 </section>
 
 <section class="section pricing">
- <div id="price"></div>
- <h2>料金プラン　　
-  <span class="highlight-gold">出張サービススタート記念・今だけ特別価格！</span>
-</h2>
+  <div id="price"></div>
+  <h2>料金プラン　
+    <span class="highlight-gold">出張サービススタート記念・今だけ特別価格！</span>
+  </h2>
+
+  <!-- ▼ 表① コーティング3コース＋コーティングメンテ ▼ -->
+  <h3 class="price-title">コーティングメニュー</h3>
   <div class="table-wrapper">
     <table>
       <tr class="table-header">
@@ -338,10 +367,10 @@ html {
         <th>軽自動車</th>
         <th>コンパクト・セダン</th>
         <th>ワンボックス・SUV</th>
-        <th>内容</th> <!-- 内容列を一番右に配置 -->
+        <th>内容</th>
       </tr>
 
-      <!-- メインコース -->
+      <!-- 3コース -->
       <tr>
         <td>スッキリ仕上げコース</td>
         <td>20,000円</td>
@@ -364,16 +393,9 @@ html {
         <td>しっかり磨き＋ガラスコーティング</td>
       </tr>
 
-      <!-- オプション -->
+      <!-- コーティングメンテ -->
       <tr class="table-header">
-        <th colspan="5">オプション</th>
-      </tr>
-      <tr>
-        <td>ライトクリーニング</td>
-        <td>5,000円</td>
-        <td>5,000円</td>
-        <td>5,000円</td>
-        <td>ヘッドライトを透明状態にしてコーティングします</td>
+        <th colspan="5">メンテナンス</th>
       </tr>
       <tr>
         <td>コーティングメンテ</td>
@@ -382,15 +404,44 @@ html {
         <td>20,000円</td>
         <td>1年に1回の定期メンテナンス</td>
       </tr>
+    </table>
+  </div>
 
-      <!-- 無料相談 -->
+
+  <!-- ▼ 表② ライトクリーニング＋任意保険相談 ▼ -->
+  <h3 class="price-title">その他サービス</h3>
+  <div class="table-wrapper">
+    <table>
+      <tr class="table-header">
+        <th>サービス</th>
+        <th>料金</th>
+        <th>内容</th>
+      </tr>
+
+      <tr>
+        <td>ライトクリーニング</td>
+        <td>5,000円～</td>
+        <td>ヘッドライトを透明状態にしてコーティングします</td>
+      </tr>
+　　　<tr>
+      <td>ガラス撥水加工（フロントのみ）</td>
+      <td>10,000円</td>
+      <td>フロントガラスの油膜を落とし撥水コーティング</td>
+    </tr>
+    <tr>
+      <td>ガラス撥水加工（全面）</td>
+      <td>30,000円</td>
+      <td>全ガラスへ油膜を落とし撥水コーティングを施工します</td>
+    </tr>
+
       <tr>
         <td>任意保険見直し相談</td>
-        <td colspan="3">0円（無料）</td>
-        <td>保険の内容や料金を無料で見直し相談できます</td>
+        <td>0円（無料）</td>
+        <td>保険内容や料金を無料で見直し相談できます</td>
       </tr>
     </table>
   </div>
+
 </section>
 
 <div class="insurance-consult" style="max-width:600px; margin:30px auto 50px auto; padding:20px; border:2px solid #4CAF50; border-radius:10px; background-color:#f9fff9; box-shadow:0 2px 6px rgba(0,0,0,0.1); font-family:Arial, sans-serif;">
@@ -522,3 +573,4 @@ STK スペース<br>
 
 </body>
 </html>
+ 
